@@ -98,7 +98,7 @@ decrypt_word =""
 
 word = 'LET US PLAY'
 encrypted = encrypt2(word, 10)
-def decrypt_without_key(encrypted):
+def crack(encrypted):
     percentage_init = 0
     for i in range(len(encrypted.split())*52):
         candidate_dec = decrypt(encrypted, i)
@@ -109,4 +109,4 @@ def decrypt_without_key(encrypted):
             decrypt_word = candidate_dec
     return decrypt_word
 
-print("the right decrypt is ", decrypt_without_key(encrypted))
+print("the right decrypt is ", crack(encrypted))

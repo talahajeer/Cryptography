@@ -23,7 +23,7 @@ def test_cipher_cracker():
     word =  "It was the best of times, it was the worst of times"
     key = random.randint(1, 26)
     encrypted = encrypt2(word, key)
-    actual = decrypt_without_key(encrypted)
+    actual = crack(encrypted)
     expected = word
 
   
